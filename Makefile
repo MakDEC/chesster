@@ -1,19 +1,12 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: aanger <marvin@42.fr>                      +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/09/24 15:49:57 by aanger            #+#    #+#              #
-#    Updated: 2019/07/15 04:03:53 by aanger           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 NAME = chess
 
 FILE =	srcs/chess.c\
-		srcs/create_new_game_board.c
+		srcs/create_new_game_board.c\
+		srcs/clear_screen.c\
+		srcs/draw_board.c\
+		srcs/move_cursor_on_top_left.c\
+		srcs/set_window_size.c
 
 FLAGS = -Wall -Werror -Wextra			\
 	-g -fsanitize=address			\
