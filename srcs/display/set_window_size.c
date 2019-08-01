@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <sys/ioctl.h>
 
 void				set_window_size(void)
 {

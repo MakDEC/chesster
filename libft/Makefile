@@ -23,21 +23,6 @@ FILE = srcs/ft_atoi.c\
 	   srcs/ft_isprint.c\
 	   srcs/ft_isupper.c\
 	   srcs/ft_itoa.c\
-	   srcs/ft_lstadd.c\
-	   srcs/ft_lstdel.c\
-	   srcs/ft_lstdelone.c\
-	   srcs/ft_lstiter.c\
-	   srcs/ft_lstmap.c\
-	   srcs/ft_lstnew.c\
-	   srcs/ft_memalloc.c\
-	   srcs/ft_memccpy.c\
-	   srcs/ft_memchr.c\
-	   srcs/ft_memcmp.c\
-	   srcs/ft_memcpy.c\
-	   srcs/ft_memdel.c\
-	   srcs/ft_memdup.c\
-	   srcs/ft_memmove.c\
-	   srcs/ft_memset.c\
 	   srcs/ft_nbrlen.c\
 	   srcs/ft_nbrlens.c\
 	   srcs/ft_putchar.c\

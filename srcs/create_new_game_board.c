@@ -1,7 +1,8 @@
 #include "chess.h"
 #include "libft.h"
+#include <stddef.h>
 
-t_game_data				*malloc_game_data_struct(void)
+static t_game_data		*malloc_game_data_struct(void)
 {
 	t_game_data			*game_data;
 
@@ -10,10 +11,12 @@ t_game_data				*malloc_game_data_struct(void)
 		ft_putstr_fd("Malloc of t_game_data failed, chess will now exit\n", 2);
 		exit(-1);
 	}
+	game_data->white_team = NULL;
+	game_data->black_team = NULL;
 	return (game_data);
 }
 
-void					erase_game_board(
+static void				reset_game_board(
 							t_game_data *game_data)
 {
 	int					horizontal_index;
@@ -32,7 +35,7 @@ void					erase_game_board(
 	}
 }
 
-void					initiale_black_team(
+static void				initiale_black_team(
 							t_game_data *game_data)
 {
 	int					horizontal_index;
@@ -51,7 +54,7 @@ void					initiale_black_team(
 		game_data->game_board[1][horizontal_index] = black_pion;
 }
 
-void					initiale_white_team(
+static void				initiale_white_team(
 							t_game_data *game_data)
 {
 	int					horizontal_index;
@@ -70,18 +73,13 @@ void					initiale_white_team(
 		game_data->game_board[6][horizontal_index] = white_pion;
 }
 
-void					init_new_game_board(
-							t_game_data *game_data)
-{
-	erase_game_board(game_data);
-	initiale_black_team(game_data);
-}
-
 t_game_data				*create_new_game_board(void)
 {
 	t_game_data			*new_game_data;
 
 	new_game_data = malloc_game_data_struct();
-	init_new_game_board(new_game_data);
+	reset_game_board(new_game_data);
+	initiale_black_team(new_game_data);
+	initiale_white_team(new_game_data);
 	return (new_game_data);
 }
