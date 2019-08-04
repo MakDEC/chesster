@@ -19,7 +19,7 @@
 typedef struct			s_piece
 {
 	char				position[2];
-	int					in_range[8];
+	int					in_range[16][2];
 	char				cover_his_king;
 }						t_piece;
 

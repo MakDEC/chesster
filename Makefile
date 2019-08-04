@@ -17,15 +17,7 @@ FILE =	srcs/chess.c\
 		srcs/infos_initialization/white_rock.c\
 		srcs/infos_initialization/white_pawn.c\
 		srcs/infos_initialization/black_queen.c\
-		srcs/range_tab/fill_range_tab.c\
-		srcs/range_tab/top_left_range.c\
-		srcs/range_tab/top_range.c\
-		srcs/range_tab/top_right_range.c\
-		srcs/range_tab/right_range.c\
-		srcs/range_tab/bottom_right_range.c\
-		srcs/range_tab/bottom_range.c\
-		srcs/range_tab/bottom_left_range.c\
-		srcs/range_tab/left_range.c\
+		srcs/range_tab/top_left_range2.c\
 		srcs/range_tab/load_range_informations.c\
 		srcs/write_settings/set_write_to_white_color.c\
 		srcs/write_settings/set_write_white_back.c\

@@ -9,7 +9,7 @@ void			load_range_informations(
 
 	range_tab_index = -1;
 	while (++range_tab_index < 8)
-		piece->in_range[range_tab_index] = range_functions_tab[range_tab_index]
-				(game_data, piece->position[1], piece->position[0]);
+		range_functions_tab[range_tab_index]
+			(game_data, piece, range_tab_index);
 	
 }
