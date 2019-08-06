@@ -17,8 +17,24 @@ FILE =	srcs/chess.c\
 		srcs/infos_initialization/white_rock.c\
 		srcs/infos_initialization/white_pawn.c\
 		srcs/infos_initialization/black_queen.c\
-		srcs/range_tab/top_left_range2.c\
-		srcs/range_tab/load_range_informations.c\
+		srcs/long_range/top_left_range.c\
+		srcs/long_range/top_range.c\
+		srcs/long_range/top_right_range.c\
+		srcs/long_range/right_range.c\
+		srcs/long_range/bottom_right_range.c\
+		srcs/long_range/bottom_range.c\
+		srcs/long_range/bottom_left_range.c\
+		srcs/long_range/left_range.c\
+		srcs/long_range/load_range_informations.c\
+		srcs/knight_range/first_knight_range_case.c\
+		srcs/knight_range/second_knight_range_case.c\
+		srcs/knight_range/third_knight_range_case.c\
+		srcs/knight_range/fourth_knight_range_case.c\
+		srcs/knight_range/fifth_knight_range_case.c\
+		srcs/knight_range/sixth_knight_range_case.c\
+		srcs/knight_range/seventh_knight_range_case.c\
+		srcs/knight_range/eighth_knight_range_case.c\
+		srcs/knight_range/load_knight_range_informations.c\
 		srcs/write_settings/set_write_to_white_color.c\
 		srcs/write_settings/set_write_white_back.c\
 		srcs/write_settings/set_write_to_blue_and_bold.c\
@@ -42,17 +58,17 @@ OBJS = $(patsubst srcs/%.c,objs/%.o,$(FILE))
 
 objs/%.o: srcs/%.c
 	@$(CC) -c $< $(FLAGS) -o $@ -I includes
-	@printf '\033[34;01m%s\n\033[0m' 'Transformorming $< into object'
+	@printf '\033[34;01m%s\n\033[0m' 'Transforming $< into object'
 
 all: includes/chess.h libft_comp create_directories $(NAME)
 
 $(NAME): $(OBJS) $(LIBFT)
 	@$(CC) -o $(NAME) $(FLAGS) $(OBJS) $(LIBFT)
-	@printf '\033[34;01m\033[1m%s\n\033[0m' 'Objects successfull linked : $(NAME) available'
+	@printf '\033[34;01m\033[1m%s\n\033[0m' 'Objects successfull linked : $(NAME) executable available'
 
 create_directories :
-	@mkdir -p objs/display objs/draw_board objs/range_tab objs/write_settings
-	@mkdir -p objs/infos_initialization
+	@mkdir -p objs/display objs/draw_board objs/long_range objs/write_settings
+	@mkdir -p objs/infos_initialization objs/knight_range
 
 
 libft_comp :

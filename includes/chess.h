@@ -19,7 +19,8 @@
 typedef struct			s_piece
 {
 	char				position[2];
-	int					in_range[16][2];
+	char				in_range[8][2];
+	char				knight_range[8];
 	char				cover_his_king;
 }						t_piece;
 
@@ -62,6 +63,8 @@ void					set_write_to_red_and_bold(void);
 void					set_write_to_white_color(void);
 
 void					load_range_informations(t_game_data *game_data,
+								t_piece *piece);
+void					load_knight_range_informations(t_game_data *game_data,
 								t_piece *piece);
 
 #endif
